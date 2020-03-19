@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>smovin</title>
+</head>
+<body>
+  <h1>Coucou</h1>
+
+  <form action="/v1/indexations" method="post" class="form">
+    <div class="form">
+      <label for="base_rent">Enter your base rent: </label>
+      <input type="text" base_rent="base_rent" id="base_rent" required>
+    </div>
+    <div class="form">
+      <label for="region">Enter your region: </label>
+      <select id="region" name="region">
+        <option value="brussels">brussels</option>
+        <option value="wallonia">wallonia</option>
+        <option value="flanders">flanders</option>
+      </select>
+    </div>
+    <div class="form">
+      <label for="start_date">Enter your start date: </label>
+      <input type="date" name="start_date" id="start_date" required>
+    </div>
+    <div class="form">
+      <label for="signed_on">Enter the date you signed on: </label>
+      <input type="date" name="signed_on" id="signed_on" required>
+    </div>
+    <div class="form">
+      <input id='submit' type="submit" value="Go!">
+    </div>
+  </form>
+
+  <script src="javascript.js"></script>
+</body>
+</html>
