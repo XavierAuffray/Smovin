@@ -1,0 +1,71 @@
+body {
+  background-color: #deebff;
+}
+
+input {
+  text-align: center;
+  vertical-align: middle;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding-top: 70px;
+  color:white;
+  margin-bottom: 100px;
+}
+
+label {
+  color:#3152cc;
+}
+
+#signed_on {
+  margin-bottom: 40px;
+}
+
+#answer {
+  text-align: center;
+  color:#3152cc;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-primary {
+  border: none;
+  background-color: #ff8b00;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 12px;
+  display: inline-block;
+  border-radius: .3rem;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  font-size: 13px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #ff8b00;
+  outline: none;
+  -webkit-transform: translateY(-1px);
+  transform: translateY(-1px);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(9,30,66,.2);
+  box-shadow: 0 0.5rem 1rem rgba(9,30,66,.2);
+}
+
+.top {
+  background-color: #3152cc;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 50px;
+}
+
+.boutton {
+  text-align: center;
+}
+
+.container {
+  width: 40%;
+}

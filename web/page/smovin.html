@@ -2,38 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Poppins&display=swap" rel="stylesheet">  <link rel="stylesheet" type="text/css" href="style.css">
   <title>smovin</title>
 </head>
 <body>
-  <h1>Get more Cash !</h1>
-
-  <form action="/v1/indexations" method="post" class="form">
-    <div class="form">
-      <label for="base_rent">Enter your base rent: </label>
-      <input type="text" base_rent="base_rent" id="base_rent" required>
-    </div>
-    <div class="form">
-      <label for="region">Enter your region: </label>
-      <select id="region" name="region">
+  <div class="top">
+    <h1>CALCULATE YOUR NEW RENT</h1>
+  </div>
+  <div class="container">
+    <form action="/v1/indexations" method="post" class="form form-group">
+<!--       <label for="region">Your region: </label>
+      <select class = "form custom-select custom-select-sm" id="region">
+        <option selected>Select your region</option>
         <option value="brussels">brussels</option>
         <option value="wallonia">wallonia</option>
         <option value="flanders">flanders</option>
-      </select>
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </select> -->
+      <div class="form form-group">
+        <label for="base_rent">Your base rent: </label>
+        <input id="base_rent" type="number" min="1" base_rent="base_rent" id="base_rent" placeholder="base rent" class="form-control" required>
+        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+      </div>
+      <div class="form form-group">
+        <label for="start_date">Your start date: </label>
+        <input type="date" name="start_date" id="start_date" class="form-control" required>
+        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+      </div>
+      <div class="form form-group">
+        <label for="signed_on">The date you signed on: </label>
+        <input type="date" name="start_date" id="signed_on" class="form-control" required>
+        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+      </div>
+      <div class="boutton">
+        <button type="submit" class="btn btn-primary align-middle">GO !</button>
+      </div>
+    </form>
+    <div id="answer" class="hidden">
     </div>
-    <div class="form">
-      <label for="start_date">Enter your start date: </label>
-      <input type="date" name="start_date" id="start_date" required>
-    </div>
-    <div class="form">
-      <label for="signed_on">Enter the date you signed on: </label>
-      <input type="date" name="signed_on" id="signed_on" required>
-    </div>
-    <div class="form">
-      <input id='submit' type="submit" value="Go!">
-    </div>
-  </form>
-
-  <div id="answer" class="hidden">
   </div>
 
   <script src="javascript.js"></script>

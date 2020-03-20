@@ -16,8 +16,8 @@ class Indexator
     base = define_base
     base_month = define_base_month
     current_month = self.current_month
-    base_index = self.base_index(base, base_month).to_i
-    current_index = self.current_index(base, current_month).to_i
+    base_index = self.base_index(base, base_month).to_f
+    current_index = self.current_index(base, current_month).to_f
     (@base_rent * current_index / base_index).round(2)
   end
 
