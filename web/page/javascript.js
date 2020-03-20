@@ -16,15 +16,14 @@ form.addEventListener('submit', function(event) {
   const output = JSON.stringify(object)
   fetch(url, {method: 'post', body: output})
   .then(function(response) {
-    console.log(response)
-    return response.blob();
+    return response.json();
   })
-  .then((data) => console.log(data))
-  // .then(function(myBlob) {
-  //   const objectURL = URL.createObjectURL(myBlob);
-  //   console.log(objectURL)
-  //   myImage.src = objectURL;
-  // });
+  .then(function(data) {
+    const new_rent = data['new_rent']
+    const answer = document.getElementById('answer')
+    const content = `<h3>${new_rent}</h3>`
+    answer.insertAdjacentHTML('beforeend', content)
+    answer.classList.remove('hidden')
+  })
 });
 
-// , mode: 'no-cors'

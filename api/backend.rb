@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'sinatra/cross_origin'
+require 'json'
 require_relative 'indexator'
 
 configure do
@@ -25,6 +26,5 @@ post '/v1/indexations' do
   contract_start_date = params['start_date']
   base_rent = params['base_rent']
   x = Indexator.new(contract_signature_date, contract_start_date, base_rent)
-  return { new_rent: x.new_rent }
-  # x.new_rent
+  return { new_rent: x.new_rent }.to_json
 end
